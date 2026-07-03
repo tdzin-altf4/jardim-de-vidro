@@ -94,7 +94,13 @@
   .foot-row{display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; font-size:13px; color:var(--ink-soft);}
 
   @media(max-width:860px){
-    .nav-links{display:none;} .menu-toggle{display:block;}
+    .nav-links{
+      display:none; position:fixed; top:66px; left:0; right:0; z-index:60;
+      flex-direction:column; align-items:center; gap:20px;
+      background:var(--glass); border-bottom:1px solid var(--line); padding:26px 0;
+    }
+    .nav-links.open{display:flex;}
+    .menu-toggle{display:block;}
     h1{font-size:34px;}
     .glass-panels{grid-template-columns:repeat(3,1fr);}
     .glass-panels .panel:nth-child(4),.glass-panels .panel:nth-child(5){display:none;}
@@ -109,13 +115,13 @@
 <nav>
   <div class="nav-row wrap" style="padding-left:0; padding-right:0;">
     <div class="brand">Jardim de Vidro</div>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#buques">Buquês</a>
       <a href="#cuidados">Cuidados</a>
       <a href="#assinatura">Assinatura</a>
       <a href="#contato">Encomendar</a>
     </div>
-    <button class="menu-toggle" aria-label="Menu">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
   </div>
 </nav>
 
@@ -130,9 +136,9 @@
   <div class="glass-panels">
     <div class="panel"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Buquê de flores rosa e branco"></div>
     <div class="panel"><img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Vaso com flores silvestres"></div>
-    <div class="panel"><img src="https://images.unsplash.com/photo-1463154545680-179a5a4a3e69?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Estufa com plantas verdes"></div>
+    <div class="panel"><img src="https://images.pexels.com/photos/12096571/pexels-photo-12096571.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Estufa com plantas verdes"></div>
     <div class="panel"><img src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Detalhe de pétalas coloridas"></div>
-    <div class="panel"><img src="https://images.unsplash.com/photo-1587305770928-414d9e0a0e1c?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Arranjo floral sobre mesa"></div>
+    <div class="panel"><img src="https://images.pexels.com/photos/35001381/pexels-photo-35001381.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Arranjo floral sobre mesa"></div>
   </div>
 </header>
 
@@ -228,6 +234,15 @@
     <div>Rua das Estufas, 55 — Manaus, AM</div>
   </div>
 </footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+</script>
 
 </body>
 </html>
