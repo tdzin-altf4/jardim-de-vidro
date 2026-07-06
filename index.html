@@ -4,6 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jardim de Vidro — Floricultura</title>
+<meta name="description" content="Jardim de Vidro — floricultura de estufa, buquês frescos toda semana e assinatura de flores em Manaus, AM.">
+<link rel="canonical" href="https://tdzin-altf4.github.io/jardim-de-vidro/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F1F3EE'/%3E%3Cellipse cx='16' cy='16' rx='6' ry='11' fill='%23C98A8A'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%233E4A34'/%3E%3C/svg%3E">
+
+<meta property="og:title" content="Jardim de Vidro — Floricultura">
+<meta property="og:description" content="Floricultura de estufa, buquês frescos toda semana e assinatura de flores em Manaus, AM.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tdzin-altf4.github.io/jardim-de-vidro/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1490750967868-88aa4486c946?fm=jpg&q=80&w=500&auto=format&fit=crop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jardim de Vidro — Floricultura">
+<meta name="twitter:description" content="Floricultura de estufa, buquês frescos toda semana e assinatura de flores em Manaus, AM.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1490750967868-88aa4486c946?fm=jpg&q=80&w=500&auto=format&fit=crop">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jardim de Vidro",
+  "description": "Floricultura de estufa com buquês frescos e assinatura semanal de flores.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua das Estufas, 55",
+    "addressLocality": "Manaus",
+    "addressRegion": "AM"
+  }
+}
+</script>
 <style>
   :root{
     --glass:#F1F3EE;
@@ -20,6 +48,19 @@
   html{scroll-behavior:smooth;}
   body{background:var(--glass); color:var(--ink); font-family:'Segoe UI', -apple-system, Helvetica, Arial, sans-serif; line-height:1.65; font-weight:300;}
   a{color:inherit; text-decoration:none;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--blush); outline-offset:3px; border-radius:2px;}
+
+  .skip-link{position:absolute; left:-999px; top:auto; background:var(--moss-deep); color:var(--glass); padding:12px 20px; z-index:100; font-size:13px;}
+  .skip-link:focus{left:16px; top:16px;}
+
+  .panel img, .subs-inner img{transition:transform .3s ease;}
+  .panel:hover img, .subs-inner img:hover{transform:scale(1.03);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .panel img, .subs-inner img, .b-photo img{transition:none !important;}
+    .panel:hover img, .subs-inner img:hover, .b-card:hover .b-photo img{transform:none;}
+  }
   .wrap{max-width:1100px; margin:0 auto; padding:0 36px;}
   .display{font-family:Georgia,'Iowan Old Style',serif; font-weight:400;}
 
@@ -131,9 +172,19 @@
     .care-grid{grid-template-columns:1fr; gap:40px;}
     .subs-inner{grid-template-columns:1fr;}
   }
+
+  @media(max-width:380px){
+    .wrap{padding:0 20px;}
+    h1{font-size:26px;}
+    h2{font-size:24px;}
+    .glass-panels{grid-template-columns:repeat(2,1fr);}
+    .glass-panels .panel:nth-child(3){display:none;}
+  }
 </style>
 </head>
 <body>
+
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
 <nav>
   <div class="nav-row wrap" style="padding-left:0; padding-right:0;">
@@ -144,11 +195,11 @@
       <a href="#assinatura">Assinatura</a>
       <a href="#contato">Encomendar</a>
     </div>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero" id="conteudo">
   <div class="pinwheel" id="pinwheel">
     <svg viewBox="0 0 100 100">
       <g transform="translate(50,50)">
@@ -170,11 +221,11 @@
     <a href="#contato" class="btn btn-line">Encomendar para hoje</a>
   </div>
   <div class="glass-panels">
-    <div class="panel"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Buquê de flores rosa e branco"></div>
-    <div class="panel"><img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Vaso com flores silvestres"></div>
-    <div class="panel"><img src="https://images.pexels.com/photos/12096571/pexels-photo-12096571.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Estufa com plantas verdes"></div>
-    <div class="panel"><img src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Detalhe de pétalas coloridas"></div>
-    <div class="panel"><img src="https://images.pexels.com/photos/35001381/pexels-photo-35001381.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Arranjo floral sobre mesa"></div>
+    <div class="panel"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Buquê de flores rosa e branco" width="500" height="667" fetchpriority="high"></div>
+    <div class="panel"><img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Vaso com flores silvestres" width="500" height="667" loading="lazy"></div>
+    <div class="panel"><img src="https://images.pexels.com/photos/12096571/pexels-photo-12096571.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Estufa com plantas verdes" width="500" height="667" loading="lazy"></div>
+    <div class="panel"><img src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?fm=jpg&q=80&w=500&auto=format&fit=crop" alt="Detalhe de pétalas coloridas" width="500" height="667" loading="lazy"></div>
+    <div class="panel"><img src="https://images.pexels.com/photos/35001381/pexels-photo-35001381.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Arranjo floral sobre mesa" width="500" height="667" loading="lazy"></div>
   </div>
 </header>
 
@@ -186,7 +237,7 @@
   </div>
   <div class="bouquets">
     <div class="b-card reveal">
-      <div class="b-photo"><img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Buquê rosa claro com folhagem"></div>
+      <div class="b-photo"><img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Buquê rosa claro com folhagem" width="600" height="600" loading="lazy"></div>
       <div class="b-info">
         <div class="tag">Tons claros</div>
         <h3>Manhã de Vidro</h3>
@@ -195,7 +246,7 @@
       </div>
     </div>
     <div class="b-card reveal" style="transition-delay:.1s">
-      <div class="b-photo"><img src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Buquê laranja e amarelo com girassóis"></div>
+      <div class="b-photo"><img src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Buquê laranja e amarelo com girassóis" width="600" height="600" loading="lazy"></div>
       <div class="b-info">
         <div class="tag">Tons quentes</div>
         <h3>Fim de Tarde</h3>
@@ -204,7 +255,7 @@
       </div>
     </div>
     <div class="b-card reveal" style="transition-delay:.2s">
-      <div class="b-photo"><img src="https://images.unsplash.com/photo-1465146633011-14f8e0781093?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Buquê branco e verde minimalista"></div>
+      <div class="b-photo"><img src="https://images.unsplash.com/photo-1465146633011-14f8e0781093?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Buquê branco e verde minimalista" width="600" height="600" loading="lazy"></div>
       <div class="b-info">
         <div class="tag">Minimalista</div>
         <h3>Estufa Branca</h3>
@@ -254,13 +305,14 @@
       <p>Um arranjo diferente entregue toda semana, sem repetir composição, com base no que estiver mais fresco na estufa.</p>
       <a href="#contato" class="btn btn-solid">Assinar entrega semanal</a>
     </div>
-    <img class="reveal" style="transition-delay:.1s" src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?fm=jpg&q=80&w=700&auto=format&fit=crop" alt="Pessoa organizando flores em balcão">
+    <img class="reveal" style="transition-delay:.1s" src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?fm=jpg&q=80&w=700&auto=format&fit=crop" alt="Pessoa organizando flores em balcão" width="700" height="525" loading="lazy">
   </div>
 </section>
 
 <section id="contato" class="wrap contact">
   <h2>Encomende com um dia de antecedência.</h2>
   <p>Entregamos na região central de terça a sábado. Encomendas de última hora, consulte disponibilidade por telefone.</p>
+  <!-- REVISAR: nenhum telefone/e-mail de contato está publicado no site para gerar um link funcional de WhatsApp -->
   <a href="#" class="btn btn-solid">Chamar no WhatsApp</a>
 </section>
 
@@ -274,9 +326,15 @@
 <script>
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
-  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
   });
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
